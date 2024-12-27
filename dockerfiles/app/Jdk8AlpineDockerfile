@@ -1,0 +1,5 @@
+FROM openjdk:8-jdk-alpine
+ARG APP_JAR_FILE
+COPY ${APP_JAR_FILE} /app/app.jar
+WORKDIR /app
+ENTRYPOINT ["java", "-jar", "-Xms256m", "-Xmx2048m", "app.jar"]

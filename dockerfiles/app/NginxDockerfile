@@ -1,0 +1,3 @@
+FROM nginx:latest
+ARG APP_DIST_DIR
+COPY ${APP_DIST_DIR} /usr/share/nginx/html
